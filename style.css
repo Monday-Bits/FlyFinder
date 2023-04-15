@@ -1,0 +1,261 @@
+#map-container {
+  border: 2px solid #189738;
+  box-shadow: 0 0 20px white;
+}
+
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(3, 56, 40, 0.685);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #022431;
+}
+
+nav::-webkit-scrollbar {
+  width: 1rem;
+}
+
+nav::-webkit-scrollbar-track {
+  background: rgba(3, 56, 40, 0.685);
+}
+
+nav::-webkit-scrollbar-thumb {
+  background: #022431;
+}
+
+
+header {
+  /* margin-top: 50px; */
+  color: white;
+  background-color: rgba(2, 195, 154, 0.4);
+  grid-column: span 2;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+  
+
+body {
+  background-image: url(./icons/page-bg.webp);
+  color: rgb(163, 233, 34);
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  border-radius: 5px;
+  background-image: url(./icons/page-bg.webp);
+  height: 100vh;
+  margin-left: 20rem;
+  display: flex; /* make the parent a flex container */
+  justify-content: center; /* horizontally center the child elements */
+  align-items: center; /* vertically center the child elements */
+
+}
+
+.cont {
+  display: inline-block; /* make the child element a block-level element */
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(25, 27, 26, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 900;
+  overflow-y: scroll;
+}
+
+.navbar .website-description {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20;
+}
+.navbar-nav input[type="text"] {
+  padding: 2px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 2px;
+}
+
+.navbar-nav input[type="button"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+
+.navbar-nav input[type="button"]:hover {
+  background-color: #05668D;
+}
+
+#table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  color: black;
+  background-color: white;
+  margin: 20px 0;
+}
+
+#table-container th,
+#table-container td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid rgba(3, 56, 40);
+}
+
+#table-container th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#table-container th:hover {
+  background-color: #05668D;
+  color: white;
+}
+
+.lightbox {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(3, 41, 51, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 15px;
+  outline: none;
+  box-shadow: 0 0 20px #fff, 0 0 50px #fff, 0 0 100px #fff;
+  }
+
+.lightbox__inner {
+
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  min-height: 200px;
+  background-image: url(./icons/lightbox-bg.webp);
+  box-shadow: 0 0 25px (0, 0, 0, 0.3);
+}
+
+.lightbox__close {
+
+  background: none;
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0, 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.lightbox__close:hover {
+
+  color: rgba(2, 195, 154);
+}
+
+.lightbox__content {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px white;
+  }
+
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-nav li {
+    margin: 10px 0;
+  }
+}
+
+
+/* /small screeens/ */
+@media only screen and (max-width: 600px) {
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    width: 100vw;
+    height: 7rem;
+  }
+
+  .website-description {
+
+    display: none;
+  }
+
+  .navbar-nav {
+
+    flex-direction: row;
+  }
+
+  .nav-item {
+
+    justify-content: center;
+  }
+
+  main {
+
+    margin: 0;
+  }
+
+  #map-container {
+    width: 75%;
+    height: 50%;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+  } 
+}
+/* 
+/large screeens/ */
+@media only screen and (min-width: 600px) {
+
+  .navbar {
+
+    margin-top: 3rem;
+    width: 20rem;
+    height: 100vh;
+  }
+
+  #map-container {
+    width: 75%;
+    height: 75%;
+    border: 1px solid black;
+    padding: 5px;
+  } 
+}

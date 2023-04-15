@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FlyFinder</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/gridjs@6.0.6/dist/gridjs.production.min.js"></script>
+  <script src="https://unpkg.com/leaflet-ant-path"></script>
+  <script src="https://maximeh.github.io/leaflet.bouncemarker/bouncemarker.js" defer></script>
+</head>
+
+<body>
+
+  <header>FlyFinder
+    <img src="./icons/logo.png" alt="logo" style="height: 50px; vertical-align: middle;">
+  </header>
+    <nav class="navbar">
+      <p class="website-description">Welcome to FlyFinder!</p>
+    
+      <ul class="navbar-nav">
+    
+        <li class="nav-item">
+          <form id="get-icao">
+            <label for="flight-iata">Enter IATA Flight Number:</label><br>
+            <input type="text" id="flight-iata" name="flight-iata" placeholder="eg. AA2703"><br>
+            <input type="button" id=submit-flight-iata value="Search">
+          </form>
+        </li>
+        <li class="nav-item">
+          <label for="airport-search">Search for an airport:</label><br>
+          <input type="text" id="airport-search" name="airport-search" placeholder="eg. JFK International"><br>
+          <input type="button" id=submit-airport value="Search">
+        </li>
+        <li class="nav-item">
+          <div id="table-container"></div>
+        </li>
+      </ul>
+    </nav>
+    <main>
+        <div id="map-container"></div>
+    </main>
+    <script src="script.js" defer></script>
+    <script type="module">
+      import { RotatedMarker } from 'https://unpkg.com/leaflet-marker-rotation';
+    </script>
+  </body>
+</html>
